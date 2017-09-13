@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="Sun Sep 10 2017 11:53:09 GMT+0800" />
-        <meta property="article:modified_time" content="Wed Sep 13 2017 11:53:32 GMT+0800" />
+        <meta property="article:modified_time" content="Wed Sep 13 2017 11:55:56 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "Titannic乘客数据信息分析",
     "url": "http://yoursite.com/2017/09/10/Titannic乘客数据信息分析/index.html",
     "datePublished": "Sun Sep 10 2017 11:53:09 GMT+0800",
-    "dateModified": "Wed Sep 13 2017 11:53:32 GMT+0800",
+    "dateModified": "Wed Sep 13 2017 11:55:56 GMT+0800",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -496,10 +496,6 @@
         <h1 id="利用scikit-learn对Titanic乘客数据信息进行分析"><a href="#利用scikit-learn对Titanic乘客数据信息进行分析" class="headerlink" title="利用scikit-learn对Titanic乘客数据信息进行分析"></a>利用scikit-learn对Titanic乘客数据信息进行分析</h1><h5 id="最近在kaggle上开始学习数据挖掘与机器学习，以Titanic项目入门，下面是分析笔记"><a href="#最近在kaggle上开始学习数据挖掘与机器学习，以Titanic项目入门，下面是分析笔记" class="headerlink" title="最近在kaggle上开始学习数据挖掘与机器学习，以Titanic项目入门，下面是分析笔记"></a>最近在kaggle上开始学习数据挖掘与机器学习，以Titanic项目入门，下面是分析笔记</h5><p>Titanic事故发生于1912年4月15日，2224名乘客与船员中有1502名遇难，震惊世界。如此高的遇难比例，很重要的一个原因是救生艇的数量不足。有部分人比其他人更大概率的得到救助，比如妇女、儿童、以及上层社会人士。那么那些人更有可能得救呢？kaggle建议我们使用机器学习的方法来进行预测。</p>
 <p>在这里我使用scikit-learn，说一下自己的思路：导入数据后先简单的进行可视化来探索数据，接着对数据进行清理与转换以便接下来的分析，构建模型并计算准确性</p>
 <h4 id="导入数据"><a href="#导入数据" class="headerlink" title="导入数据"></a>导入数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding:utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</div><div class="line">%matplotlib inline</div><div class="line">data_train = pd.read_csv(<span class="string">'train.csv'</span>)</div><div class="line">data_test = pd.read_csv(<span class="string">'test.csv'</span>)</div><div class="line">data_train.sample(<span class="number">3</span>)</div></pre></td></tr></table></figure>
-<div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>PassengerId</th><br>      <th>Survived</th><br>      <th>Pclass</th><br>      <th>Name</th><br>      <th>Sex</th><br>      <th>Age</th><br>      <th>SibSp</th><br>      <th>Parch</th><br>      <th>Ticket</th><br>      <th>Fare</th><br>      <th>Cabin</th><br>      <th>Embarked</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>200</th><br>      <td>201</td><br>      <td>0</td><br>      <td>3</td><br>      <td>Vande Walle, Mr. Nestor Cyriel</td><br>      <td>male</td><br>      <td>28.0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>345770</td><br>      <td>9.50</td><br>      <td>NaN</td><br>      <td>S</td><br>    </tr><br>    <tr><br>      <th>300</th><br>      <td>301</td><br>      <td>1</td><br>      <td>3</td><br>      <td>Kelly, Miss. Anna Katherine “Annie Kate”</td><br>      <td>female</td><br>      <td>NaN</td><br>      <td>0</td><br>      <td>0</td><br>      <td>9234</td><br>      <td>7.75</td><br>      <td>NaN</td><br>      <td>Q</td><br>    </tr><br>    <tr><br>      <th>624</th><br>      <td>625</td><br>      <td>0</td><br>      <td>3</td><br>      <td>Bowen, Mr. David John “Dai”</td><br>      <td>male</td><br>      <td>21.0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>54636</td><br>      <td>16.10</td><br>      <td>NaN</td><br>      <td>S</td><br>    </tr><br>  </tbody><br></table><br></div>
-
-
-
 <h4 id="可视化探索"><a href="#可视化探索" class="headerlink" title="可视化探索"></a>可视化探索</h4><p>对数据进行可视化探索有助于模型的构建。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.barplot(x=<span class="string">"Embarked"</span>,y=<span class="string">"Survived"</span>,hue=<span class="string">"Sex"</span>,data=data_train)</div></pre></td></tr></table></figure>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xcb83f98&gt;
