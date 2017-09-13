@@ -12,6 +12,8 @@
     
     <title>
         
+            linux命令行总结 | 
+        
         谢忠伟的博客
     </title>
 
@@ -63,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="谢忠伟的博客">
+    <meta property="og:title" content="linux命令行总结 | 谢忠伟的博客">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="Wed Jul 05 2017 11:54:55 GMT+0800" />
+        <meta property="article:modified_time" content="Wed Jul 05 2017 18:05:19 GMT+0800" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="谢忠伟的博客">
+    <meta name="twitter:title" content="linux命令行总结 | 谢忠伟的博客">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -79,35 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com" />
+        <link rel="canonical" href="http://yoursite.com/2017/07/05/linux-command/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
+
+
 <script type="application/ld+json">
 {
-    "@context": "http://schema.org",
-    "@type": "Website",
+    "@context": "https://schema.org",
+    "@type": "Article",
     "publisher": {
         "@type": "Organization",
         "name": "谢忠伟的博客",
         "logo": "/img/favicon.png"
     },
-    "url": "http://yoursite.com/index.html",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/img/favicon.png"
+    "author": {
+        "@type": "Person",
+        "name": "谢忠伟",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "Hi, nice to meet you"
     },
+    "headline": "linux命令行总结",
+    "url": "http://yoursite.com/2017/07/05/linux-command/index.html",
+    "datePublished": "Wed Jul 05 2017 11:54:55 GMT+0800",
+    "dateModified": "Wed Jul 05 2017 18:05:19 GMT+0800",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://yoursite.com"
-    },
-    "description": "null"
+    }
 }
 </script>
-
-
 
 
     
@@ -299,407 +312,248 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
+                    <!-- Post TOC -->
+
     
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
-
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
-        <p class="index-top-block-slogan"><a href="#">
-        
-            
-                Hi, nice to meet you
-            
-        
-        </a></p>
-    </div>
-
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="E:\me\Blog\blog\source\_posts\pictures\24972632.jpg" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>谢忠伟</strong>
-        </div>
-    </div>
-</div>
-
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
-    
-    <!-- Google -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
-        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-        </label>
-
-        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
-            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
-            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-
-            <input type="hidden" name="sitesearch" value="http://yoursite.com">
-        </form>
-    </div>
-
-
-
-
-
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="#" target="_blank">
-            <img src="/img/logo.png" alt="logo" />
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
         </a>
     </div>
+    -->
 
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>谢忠伟的博客</strong>
-        </div>
-        <div class="section-spacer"></div>
-
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-        </ul>
-
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=谢忠伟的博客&url=http://yoursite.com/&pic=&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=谢忠伟的博客&url=http://yoursite.com/&via=谢忠伟" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Twitter
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/index.html" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Facebook
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://plus.google.com/share?url=http://yoursite.com/" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Google+
-                    </li>
-                </a>
-            
-
-            
-
-            
-                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=谢忠伟的博客&title=谢忠伟的博客&summary=null&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/" target="_blank">
-                    <li class="mdl-menu__item">
-                        分享到 QQ
-                    </li>
-                </a>
-            
-
-            
-        </ul>
-    </div>
-</div>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
 
     
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文本截取命令"><span class="post-toc-number">1.</span> <span class="post-toc-text">文本截取命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#排序命令"><span class="post-toc-number">2.</span> <span class="post-toc-text">排序命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符转换命令"><span class="post-toc-number">3.</span> <span class="post-toc-text">字符转换命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查找文件"><span class="post-toc-number">4.</span> <span class="post-toc-text">查找文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解压"><span class="post-toc-number">5.</span> <span class="post-toc-text">解压</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vim"><span class="post-toc-number">6.</span> <span class="post-toc-text">vim</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正则表达式"><span class="post-toc-number">7.</span> <span class="post-toc-text">正则表达式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sed"><span class="post-toc-number">8.</span> <span class="post-toc-text">sed</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/10/对Titanic乘客数据信息分进行分析/">对Titanic乘客数据信息分进行分析</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/10/对Titanic乘客数据信息分进行分析/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="E:\me\Blog\blog\source\_posts\pictures\24972632.jpg" width="44px" height="44px" alt="谢忠伟's avatar">
-            </div>
-            <div>
-                <strong>谢忠伟</strong>
-                <span>9月 10, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/07/05/linux-command/">linux命令行总结</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/07/05/linux-command/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="E:\me\Blog\blog\source\_posts\pictures\24972632.jpg" width="44px" height="44px" alt="谢忠伟's avatar">
-            </div>
-            <div>
-                <strong>谢忠伟</strong>
-                <span>7月 05, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/05/18/markdown/">markdown语法简要</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            上次我简单学习了利用github和hexo搭建个人博客网站，网站搭建好了之后如何写博文成文当务之急。Hexo框架使用Markdown解析文章，在
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/05/18/markdown/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="E:\me\Blog\blog\source\_posts\pictures\24972632.jpg" width="44px" height="44px" alt="谢忠伟's avatar">
-            </div>
-            <div>
-                <strong>谢忠伟</strong>
-                <span>5月 18, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/05/17/build-blog-site/">利用GitHub与Hexo构建个人博客</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            为了更好的总结自己的学习收获，本人决定从即日起养成写博客的习惯。首先要解决的就是如何开始自己的博客之旅，本着Geek的精神，在知乎上花了不到一天的时...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/05/17/build-blog-site/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="E:\me\Blog\blog\source\_posts\pictures\24972632.jpg" width="44px" height="44px" alt="谢忠伟's avatar">
-            </div>
-            <div>
-                <strong>谢忠伟</strong>
-                <span>5月 17, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                linux命令行总结
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="E:\me\Blog\blog\source\_posts\pictures\24972632.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>谢忠伟</strong>
+        <span>7月 05, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=linux命令行总结&url=http://yoursite.com/2017/07/05/linux-command/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=linux命令行总结&url=http://yoursite.com/2017/07/05/linux-command/index.html&via=谢忠伟" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/07/05/linux-command/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/07/05/linux-command/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=谢忠伟的博客&title=linux命令行总结&summary=null&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/07/05/linux-command/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="文本截取命令"><a href="#文本截取命令" class="headerlink" title="文本截取命令"></a><strong>文本截取命令</strong></h3><p>cut -d ‘分隔字符‘ -f 序号<br>cut -c 字符区间<br>grep [options] ‘搜索字符串’ filename<br>    -c 次数<br>    -i 忽略大小写<br>    -n 输出行号<br>    -v 反向选择</p>
+<h3 id="排序命令"><a href="#排序命令" class="headerlink" title="排序命令"></a><strong>排序命令</strong></h3><p> sort [options] file/stdin<br>     -f 忽略大小写<br>    -n 以数字排序<br>    -u unique<br>    -t 分隔符<br>    -k 序号<br>uniq -i 忽略大小写 -c 计数<br>wc -lwm <em>统计行、字、字符</em></p>
+<h3 id="字符转换命令"><a href="#字符转换命令" class="headerlink" title="字符转换命令"></a><strong>字符转换命令</strong></h3><p>tr -d ‘字符串’        <em>删除字符串</em><br>join [-t  i  1  2]  file1 file2<br>paste -d file1 file2<br>split -bl file <em>b大小 l行数进行分割</em><br>comm -12 &lt;(sort a.txt|uniq) &lt;(sort b.txt|uniq)    <em>取ab文件交集</em></p>
+<h3 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a><strong>查找文件</strong></h3><p>find 目录 -name 文件名 -exec rm -rf {} \;    <em>在目录中查找某文件并删除</em><br>locate 文件名</p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a><strong>解压</strong></h3><p>*.tar　　　　　　tar -xvf<br>*.gz　　　　　　gzip -d 或 gunzip<br>*.tar.gz和*.tgz　　tar -xzf<br>*.bz2　　　　　　bzip2 -d 或 bunzip2<br>*.tar.bz2　　　　tar -xjf<br>*.z　　　　　　　uncompress<br>*.tar.z　　　　　tar -xZf<br>*.rar　　　　　　unrar -e<br>*.zip　　　　　　unzip</p>
+<h3 id="vim"><a href="#vim" class="headerlink" title="vim"></a><strong>vim</strong></h3><ol>
+<li><p><strong>一般模式</strong><br> ctrl + f    　　　　　　　下一页<br> ctrl + b   　　　　　　　上一页<br> x/X　　　　　　　　　向后／前删除<br> dd　　　　　　　　　删除整行<br> ndd  　　　　　　　　删除光标下n行<br> yy  　　　　　　　　　复制所在行<br> p  　　　　　　　　　粘贴至光标下一行<br> P 　　　　　　　　　粘贴至光标上一行<br> O 或 home 　　　　　移到此行最前处<br> $ 或 end  　　　　　　移到此行最末端<br> G  　　　　　　　　　移到档案最后一行<br> gg  　　　　　　　　　移到档案第一行<br> n + Enter  　　　　　　向下移动n行<br> u  　　　　　　　　　复原前一个动作<br> .  　　　　　　　　　重复前一个动作<br> /word  　　　　　　　寻找名称word字符串<br> :n1,n2/word1/word2/g  　　n1到n2行之间word1替换成word2，$s代表最后一行</p>
+</li>
+<li><p><strong>编辑模式</strong><br> a,i,o  　　　　　　编辑<br> r/R 　　　　　　　取代模式<br> Esc 　　　　　　退出一般模式</p>
+</li>
+<li><p><strong>指令模式</strong><br> :w 　　　　　　　将编辑数据写入硬盘<br> :q! 　　　　　　　不保存离开vim<br> :wq 　　　　　　保存并退出，ZZ也可以<br> :set nu 　　　　　显示行号</p>
+</li>
+</ol>
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a><strong>正则表达式</strong></h3><p>^word　　 word在行首<br>word$　　 word在行尾<br>.　　　　　一定有一个任意字符<br>*　　　　 重复零个或无穷多个前一个字符<br>\　　　　　跳脱字符<br>[list]　　　 撷取字符集合<br>[n1-n2]　　 撷取字符范围<br>[^list]　　　 不要的字符串或范围<br>{n,m} 　　连续n到m个前一个字符</p>
+<p>eg:列出以’a’开头，中间2-6个字母，以‘b’结尾的字符串：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -n <span class="string">'^a[a-zA-Z]\&#123;2,6\&#125;b$'</span> filename</div></pre></td></tr></table></figure></p>
+<h3 id="sed"><a href="#sed" class="headerlink" title="sed"></a><strong>sed</strong></h3>
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/09/10/对Titanic乘客数据信息分进行分析/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/05/18/markdown/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -987,12 +841,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-
-    <!-- Swiftye -->
-    
-
-    <!-- Local Search-->
-    
 
 
 <!-- UC Browser Compatible -->
