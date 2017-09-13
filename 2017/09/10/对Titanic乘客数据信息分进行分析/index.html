@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="Sun Sep 10 2017 10:59:27 GMT+0800" />
-        <meta property="article:modified_time" content="Wed Sep 13 2017 11:01:07 GMT+0800" />
+        <meta property="article:modified_time" content="Wed Sep 13 2017 11:15:35 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "对Titanic乘客数据信息分进行分析",
     "url": "http://yoursite.com/2017/09/10/对Titanic乘客数据信息分进行分析/index.html",
     "datePublished": "Sun Sep 10 2017 10:59:27 GMT+0800",
-    "dateModified": "Wed Sep 13 2017 11:01:07 GMT+0800",
+    "dateModified": "Wed Sep 13 2017 11:15:35 GMT+0800",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -503,10 +503,10 @@
 <h4 id="可视化探索"><a href="#可视化探索" class="headerlink" title="可视化探索"></a>可视化探索</h4><p>对数据进行可视化探索有助于模型的构建。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.barplot(x=<span class="string">"Embarked"</span>,y=<span class="string">"Survived"</span>,hue=<span class="string">"Sex"</span>,data=data_train)</div></pre></td></tr></table></figure>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xcb83f98&gt;
-</code></pre><p><img src="titanic_files/titanic_4_1.png" alt="png"></p>
+</code></pre><p><img src="E:\\me\\Blog\\blog\\titanic_files\\titanic_4_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.pointplot(x=<span class="string">"Pclass"</span>,y=<span class="string">"Survived"</span>,hue=<span class="string">"Sex"</span>,data=data_train)</div></pre></td></tr></table></figure>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xcb783c8&gt;
-</code></pre><p><img src="titanic_files/titanic_5_1.png" alt="png"></p>
+</code></pre><p><img src="E:\\me\\Blog\\blog\\titanic_files\\titanic_5_1.png" alt="png"></p>
 <h4 id="数据加工"><a href="#数据加工" class="headerlink" title="数据加工"></a>数据加工</h4><ol>
 <li>Age是非常重要的一个特征，为了方便后续分析，根据年龄分段对其进行离散化；</li>
 <li>Cabin数据包括字母和数字，很明显字母更有意义，将其提取出来；</li>
@@ -522,13 +522,13 @@
 <p>分别对特征Age，Cabin与生存率的相关性进行可视化探索</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.barplot(x=<span class="string">'Age'</span>,y=<span class="string">"Survived"</span>,hue=<span class="string">"Sex"</span>,data=data_train)</div></pre></td></tr></table></figure>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xd1dda20&gt;
-</code></pre><p><img src="titanic_files/titanic_9_1.png" alt="png"></p>
+</code></pre><p><img src="E:\\me\\Blog\\blog\\titanic_files\\titanic_9_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.barplot(x=<span class="string">'Cabin'</span>,y=<span class="string">"Survived"</span>,hue=<span class="string">"Sex"</span>,data=data_train)</div></pre></td></tr></table></figure>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xce9b898&gt;
-</code></pre><p><img src="titanic_files/titanic_10_1.png" alt="png"></p>
+</code></pre><p><img src="E:\\me\\Blog\\blog\\titanic_files\\titanic_10_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sns.barplot(x=<span class="string">'Fare'</span>,y=<span class="string">"Survived"</span>,hue=<span class="string">"Sex"</span>,data=data_train)</div></pre></td></tr></table></figure>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xdab2390&gt;
-</code></pre><p><img src="titanic_files/titanic_11_1.png" alt="png"></p>
+</code></pre><p><img src="E:\\me\\Blog\\blog\\titanic_files\\titanic_11_1.png" alt="png"></p>
 <p>为了更好的构建模型，需要将字符型数据转换为数字型，虽然对人来说难以理解，但对机器却是十分友好,这里使用scikit-learn中的LabelEncoder</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">encode_features</span><span class="params">(df_train,df_test)</span>:</span></div><div class="line">    fetures = [<span class="string">'Fare'</span>,<span class="string">'Cabin'</span>,<span class="string">'Age'</span>,<span class="string">'Sex'</span>,<span class="string">'Lname'</span>,<span class="string">'NamePrefix'</span>]</div><div class="line">    df_combined = pd.concat([df_train[fetures],df_test[fetures]])</div><div class="line">    <span class="keyword">for</span> feture <span class="keyword">in</span> fetures:</div><div class="line">        le = preprocessing.LabelEncoder()</div><div class="line">        le = le.fit(df_combined[feture])</div><div class="line">        df_train[feture] = le.transform(df_train[feture])</div><div class="line">        df_test[feture] = le.transform(df_test[feture])</div><div class="line">    <span class="keyword">return</span> df_train,df_test</div><div class="line"></div><div class="line">data_train,data_test = encode_features(data_train,data_test)</div><div class="line">data_train.head()</div></pre></td></tr></table></figure>
 <div><br><style><br>    .dataframe thead tr:only-child th {<br>        text-align: right;<br>    }<br><br>    .dataframe thead th {<br>        text-align: left;<br>    }<br><br>    .dataframe tbody tr th {<br>        vertical-align: top;<br>    }<br></style><br><table border="1" class="dataframe"><br>  <thead><br>    <tr style="text-align: right;"><br>      <th></th><br>      <th>PassengerId</th><br>      <th>Survived</th><br>      <th>Pclass</th><br>      <th>Sex</th><br>      <th>Age</th><br>      <th>SibSp</th><br>      <th>Parch</th><br>      <th>Fare</th><br>      <th>Cabin</th><br>      <th>Lname</th><br>      <th>NamePrefix</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <th>0</th><br>      <td>1</td><br>      <td>0</td><br>      <td>3</td><br>      <td>1</td><br>      <td>4</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>7</td><br>      <td>100</td><br>      <td>19</td><br>    </tr><br>    <tr><br>      <th>1</th><br>      <td>2</td><br>      <td>1</td><br>      <td>1</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>0</td><br>      <td>3</td><br>      <td>2</td><br>      <td>182</td><br>      <td>20</td><br>    </tr><br>    <tr><br>      <th>2</th><br>      <td>3</td><br>      <td>1</td><br>      <td>3</td><br>      <td>0</td><br>      <td>7</td><br>      <td>0</td><br>      <td>0</td><br>      <td>0</td><br>      <td>7</td><br>      <td>329</td><br>      <td>16</td><br>    </tr><br>    <tr><br>      <th>3</th><br>      <td>4</td><br>      <td>1</td><br>      <td>1</td><br>      <td>0</td><br>      <td>7</td><br>      <td>1</td><br>      <td>0</td><br>      <td>3</td><br>      <td>2</td><br>      <td>267</td><br>      <td>20</td><br>    </tr><br>    <tr><br>      <th>4</th><br>      <td>5</td><br>      <td>0</td><br>      <td>3</td><br>      <td>1</td><br>      <td>7</td><br>      <td>0</td><br>      <td>0</td><br>      <td>1</td><br>      <td>7</td><br>      <td>15</td><br>      <td>19</td><br>    </tr><br>  </tbody><br></table><br></div>
